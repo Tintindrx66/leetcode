@@ -22,6 +22,7 @@ Git workflow:
     Ray will NOT merge the issue branch to master either. Rui-Xiang should checkout Ray's work on the issue branch 
 
 some commands:
+
     "mkdir dir_name": create a directory named dir_name
     "subl a.java": edit/create a java file named a.java, this can also be done with whatever texteditor you prefer
     "git add file_name": add the changes to a file so that it can be committed 
@@ -29,5 +30,8 @@ some commands:
     "git commit": commit the change 
     "git push": push your change to server, so that others can see it
 
+some more commands:
+    
+    TBD
 
 
