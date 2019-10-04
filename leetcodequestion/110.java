@@ -2,7 +2,7 @@
 /*As question shown, a binary tree in which the depth of the two subtrees of every node
 never differ by more than 1.Thus, only judge differenceof max depth between left path and right path*/
 /*In order to easily understand, we can build Type class that includes isbalanced and maxdepth and helper function to achieve condition of a balanced binary tree. It still used divide and conquer after considering special case where root is null. Then it would return false if left and right subtree is not balanced, also including more than one difference of max depth between these two subtrees. Finally, calling helper function refers whether this binary tree is balanced or not*/
-
+//TreeNode
 class TreeNode{
     int val;
     TreeNode left;
@@ -11,6 +11,7 @@ class TreeNode{
         x=val;
     }
 }
+//Type
 class Type{
     int maxdepth;
     boolean isbalance;
@@ -19,6 +20,7 @@ class Type{
         this.isbalance=isbalance;
     }
 }
+
 class Solution {
     public boolean isBalanced(TreeNode root) {
         return helper(root).isbalance;
