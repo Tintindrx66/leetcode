@@ -1,3 +1,9 @@
+// COMMENT FROM RAY
+// As I have mentioned to you before, if you use while loop to do the binary search and get TLE,
+// most likely you end up in a infinite loop
+// Basically, check if your search interval is always shorter after each loop
+// pay special attention to the length 2 interval case e.g. [1,2] [2,3]
+
 //Search a 2D matrix
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
