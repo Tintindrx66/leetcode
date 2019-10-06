@@ -1,5 +1,5 @@
 /*The idea is to find nodes whose left and right is null, comparing values of leaves on both trees to check whether both trees are leaf-similar */
-class Solution {
+/*class Solution {
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         if(root1==null||root2==null){
             return false;
@@ -16,6 +16,34 @@ class Solution {
         boolean rightpath=leafSimilar(root1.right, root2.right);
         
         return leftpath||rightpath;
+        
+        
+    }
+}
+*/
+class Solution {
+    public boolean leafSimilar(TreeNode root1, TreeNode root2) {
+        
+        
+        List<Integer> res1=new ArrayList<>();
+        List<Integer> res2=new ArrayList<>();
+        helper(root1, res1);
+        helper(root2, res2);
+        if(res1.equals(res2)){
+            return true;
+        }
+        
+        return false;
+        
+    }
+    private void helper(TreeNode node, List<Integer> res){
+        if(node!=null){
+            if(node.left==null&&node.right==null){
+                res.add(node.val);//exit
+            }
+            helper(node.left, res);
+            helper(node.right, res);
+        }
         
         
     }
