@@ -1,3 +1,10 @@
+/*
+ * Ray's comment:
+ * It's a brilliant idea to use cross product to check if 3 points are on the same line
+ * 
+ * for this specific problem, it is possiblt to do it in O(n),
+ * can you try?
+ */
 class Solution {
     public boolean checkStraightLine(int[][] coordinates) {
         if(coordinates==null||coordinates.length==0){return false;}
