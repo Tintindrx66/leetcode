@@ -1,3 +1,18 @@
+/*
+ * Ray's comment:
+ *
+ * The key observation to solve this problem is this:
+ * if we split the string S into three parts L, M, R denote
+ * left, middle, right part respectively
+ *
+ * Consider the following question, if we can make S balanced only by
+ * modifying M. Then what property should L, R have?
+ * Based on this, it is possible to binary search the length of M
+ * which will yield to an O(n log n) solution
+ *
+ * You can further improve it into linear time complexity by maintaining
+ * two pointer denote L, R 
+ */
 class Solution {
     public int balancedString(String s) {
         if(s==null||s.length()==0){return 0;}
