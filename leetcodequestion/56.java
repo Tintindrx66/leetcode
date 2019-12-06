@@ -1,3 +1,8 @@
+/*
+using lists can store one merge array when two adjacent arrays that are overflapped otherwise just 
+store this array, finally stored by list<list<Integer>> that can be transferred to 
+int[][].
+*/
 class Solution {
     public int[][] merge(int[][] intervals) {
         if(intervals == null || intervals.length==0) {return null;}
