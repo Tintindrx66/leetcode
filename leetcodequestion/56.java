@@ -3,7 +3,7 @@ class Solution {
         if(intervals == null || intervals.length==0) {return null;}
         List<Integer> lists = new ArrayList<>();
         List<List<Integer>> res = new ArrayList<>();
-        
+        Arrays.sort(intervals, (a, b)-> a[0]-b[0]);
         for(int i=1;i<intervals.length;++i) {
             
             if(intervals[i][0]<intervals[i-1][1]) {
