@@ -11,6 +11,9 @@ class Solution {
         Arrays.sort(intervals, (a, b)-> a[0]-b[0]);
         for(int i=1;i<intervals.length;++i) {
             
+            // RAY's comment: here you should compare intervals[i] with the last element in result
+            // i.e. result.get(result.size()-1)
+            // consider this case: [0, 10], [1, 11], [2, 12]
             if(intervals[i][0]<intervals[i-1][1]) {
                 lists.add(intervals[i-1][0]);
                 lists.add(intervals[i][1]);
